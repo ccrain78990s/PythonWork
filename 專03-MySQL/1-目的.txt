@@ -1,0 +1,3 @@
+嘗試建立MySQL表格
+並把OpenData匯入MySQL
+再試著從MySQL把資料撈出來做處理(印資料出來或圖片...等)

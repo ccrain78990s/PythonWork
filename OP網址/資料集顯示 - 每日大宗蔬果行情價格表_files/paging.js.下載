@@ -1,0 +1,74 @@
+function pageable(page, orderBy, orderAscDesc, formName, externalForm) {
+  if (typeof externalForm != 'undefined' && externalForm != '') {
+    externalForm = externalForm + '.';
+  } else {
+    externalForm = "";
+  }
+  var old = $('#' + formName + ' input[name="' + externalForm + 'oldText"]').val();
+  var all = $('#' + formName + ' input[name="' + externalForm + 'allText"]').val();
+  if ((all != old) && typeof(page) != "undefined") {
+    $('#' + formName + ' input[name="' + externalForm + 'allText"]').val(old);
+  }
+  $('#' + formName + ' input[name="' + externalForm + 'page"]').val(page);
+  if (orderBy != null && orderBy != '') {
+    $('#' + formName + ' input[name="' + externalForm + 'sidx"]').val(orderBy);
+  }
+  if (orderAscDesc != null && orderAscDesc != '') {
+    $('#' + formName + ' input[name="' + externalForm + 'sord"]').val(orderAscDesc);
+  }
+  $('#' + formName).submit();
+}
+
+function changePage(page, orderBy, orderAscDesc, formName, externalForm) {
+  if (typeof externalForm != 'undefined' && externalForm != '')
+    externalForm = externalForm + '.';
+  else
+    externalForm = "";
+  $('#' + formName + ' input[name="' + externalForm + 'currentPage"]').val(page);// currentPage
+  if (orderBy != null && orderBy != '') {
+    $('#' + formName + ' input[name="' + externalForm + 'orderBy"]').val(orderBy);
+  }
+  if (orderAscDesc != null && orderAscDesc != '') {
+    $('#' + formName + ' input[name="' + externalForm + 'orderAscDesc"]').val(orderAscDesc);
+  }
+  $('#' + formName).submit();
+}
+
+function inputChangePage(page, orderBy, orderAscDesc, formName, totalPages, e) {
+  // distinguish between IE's explicit event object (window.event) and Firefox's
+  // implicit.
+  var evtobj = window.event ? event : e;
+  var unicode = evtobj.charCode ? evtobj.charCode : evtobj.keyCode
+  if (unicode == 13) {
+    if (page < 0)
+      page = 1;
+    if (parseInt(page) > parseInt(totalPages))
+      page = totalPages;
+    changePage(page, orderBy, orderAscDesc, formName);
+  }
+}
+
+function changeOrder(orderBy, lastOrderBy, orderAscDesc, formName) {
+  $('#' + formName + ' input[name="currentPage"]').val('1');
+  $('#' + formName + ' input[name="orderBy"]').val(orderBy);
+  if (lastOrderBy == orderBy && orderAscDesc == 'asc') {
+    $('#' + formName + ' input[name="orderAscDesc"]').val('desc');
+  } else {
+    $('#' + formName + ' input[name="orderAscDesc"]').val('asc');
+  }
+  $('#' + formName).submit();
+}
+
+function changeOrderAsc(orderBy, formName) {
+  $('#' + formName + ' input[name="currentPage"]').val('1');
+  $('#' + formName + ' input[name="orderBy"]').val(orderBy);
+  $('#' + formName + ' input[name="orderAscDesc"]').val('asc');
+  $('#' + formName).submit();
+}
+
+function changeOrderDesc(orderBy, formName) {
+  $('#' + formName + ' input[name="currentPage"]').val('1');
+  $('#' + formName + ' input[name="orderBy"]').val(orderBy);
+  $('#' + formName + ' input[name="orderAscDesc"]').val('desc');
+  $('#' + formName).submit();
+}

@@ -1,0 +1,24 @@
+function previewScreen(block) {
+
+	if (self == top) {
+		var theBody = document.getElementsByTagName('body')[0];
+		theBody.style.display = "block";
+	} else {
+		top.location = self.location;
+	}
+
+	var b = $(block).clone();
+	$(b).find("#dataset-resources").remove();
+	$(b).find("table").attr("border", "1").attr("cellspacing", "0");
+	var value = $(b).html().replace(/\t/g, "").replace(/\n/g, "");
+	var printPage = window.open("", "printPage", "");
+	printPage.document.open();
+	printPage.document
+			.write("<OBJECT classid='CLSID:8856F961-340A-11D0-A96B-00C04FD705A2' height=0 id=wc name=wc width=0>友善列印</OBJECT>");
+	printPage.document
+			.write("<HTML><head></head><BODY onload='javascript:window.print();window.close();'>");
+	printPage.document.write("<PRE>");
+	printPage.document.write(value);
+	printPage.document.write("</PRE>");
+	printPage.document.close("</BODY></HTML>");
+}

@@ -1,0 +1,30 @@
+0323小專案資料尋找
+
+家庭收支調查-所得收入者職業別平均每人"所得收入總計"  2020-10-27
+https://data.gov.tw/dataset/131148
+家庭收支調查-所得收入者職業別平均每人"非消費支出"   2020-11-18
+https://data.gov.tw/dataset/132281
+家庭收支調查-所得收入者職業別平均每人"可支配所得"  2020-09-23
+https://data.gov.tw/dataset/130027
+
+
+表3 臺中市消費者物價指數－商品性質分類 
+https://opendata.taichung.gov.tw/dataset/3ad1e1f1-1a9f-11e8-8f43-00155d021202/resource/04dc685f-19ce-4cc2-9ffb-c0737693f12a
+
+0327其他資料尋找
+台灣電力公司_過去電力供需資訊
+https://data.gov.tw/dataset/19995
+空氣品質指標(AQI)概況
+https://data.gov.tw/dataset/89029
+空氣品質監測月值
+https://data.gov.tw/dataset/28202
+車站基本資料集
+https://data.gov.tw/dataset/33425
+每日各站點進出站人數
+https://data.gov.tw/dataset/8792
+15歲以上現住人口按性別、年齡、婚姻狀況及教育程度分(含同婚)
+https://data.gov.tw/dataset/117988
+165反詐騙諮詢專線-詐騙LINE ID
+https://data.gov.tw/dataset/78432
+全國5大超商資料集
+https://data.gov.tw/dataset/32086

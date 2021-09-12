@@ -1,0 +1,58 @@
+<html>
+<head>
+  <title> 專案 4 :餐飲衛生管理分級評核 </title>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+<body style="background-color:pink;" background="bg1.jpg" width="1024" height="768">
+<br>
+<br>
+<!--標題1-->
+<h1 style="font-family:verdana;" align="center">
+    <font face="Comic Sans MS">109年度餐飲衛生管理-<ins>新竹市</ins></font>
+</h1>
+
+<br>
+<br>
+
+<!--標題2-->
+<h2 align="center" >
+    <font face="Comic Sans MS"> ↓ 評核結果查詢-請點選 ↓ </font>
+</h2>
+<br>
+
+
+<br>
+<table border="1"  align='center' >
+
+<tr>
+    <td style="height:50px;width:250px;" align='center' valign="middle">
+        <a href="http://127.0.0.1:8888/?action=restaurantall" style="font-size:20px">顯示評核結果全部資料</a>
+    </td>
+</tr>
+
+
+<tr>
+    <td style="height:120px;width:50px;" align='center' valign="middle">
+    <form action="http://127.0.0.1:8888" method="get"  style="font-size:18px">
+            <br>
+            依照等級查詢店家資料
+            <br>
+            <input type="radio" name="action" value="restaurant" checked>新竹市餐廳資料
+                 <select name="level" id="level">
+                    <option value="優">優</option>
+                    <option value="良">良</option>
+                 </select>
+            <br>
+            <br>
+            <button type="submit"  value="Submit">查詢</button>
+
+        </form>
+    </td>
+</tr>
+
+</table>
+
+</body>
+</html>

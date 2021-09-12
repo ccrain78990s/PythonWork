@@ -1,0 +1,10 @@
+寶石
+https://www.kaggle.com/lsind18/gemstones-images?select=test
+書法 依照人名
+https://www.kaggle.com/yuanhaowang486/chinese-calligraphy-styles-by-calligraphers
+人臉表情
+https://www.kaggle.com/muhammeddalkran/masked-facerecognition
+書法風格 4種
+https://www.kaggle.com/richardcsuwandi/chinese-calligraphy-styles
+根據飲食習慣和身體狀況估算肥胖程度數據集
+https://archive.ics.uci.edu/ml/datasets/Estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition+

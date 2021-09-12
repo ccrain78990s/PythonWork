@@ -1,0 +1,131 @@
+<aiml version="1.0.1" encoding="UTF-8">
+    <!-- start-->
+    <category>
+      <pattern>搜尋指令查詢</pattern>
+       <template>歡迎使用本系統，您可以輸入以下指令:
+           [你好]
+           [再見]
+           [你喜歡 *或 *]
+       </template>
+    </category>
+
+    <category>
+      <pattern>你好</pattern>
+      <template>
+            <random>
+                <li>你好,歡迎來到甜心一點烘培坊</li>
+                <li>你好我能為妳做什麼.</li>
+            </random>
+      </template>
+    </category>
+
+    <category>
+      <pattern>服務時間</pattern>
+      <template>
+          我們的服務時間為10點到22點
+      </template>
+    </category>
+    <category>
+      <pattern>公司地址</pattern>
+      <template>
+          新北市板橋區南雅西路2段2號
+      </template>
+    </category>
+    <category>
+      <pattern>公司網址</pattern>
+      <template>
+          http://www.sweetydot.com/
+      </template>
+    </category>
+    <category>
+      <pattern>公司電話</pattern>
+      <template>
+          09123456789
+      </template>
+    </category>
+    <category>
+      <pattern>服務項目</pattern>
+      <template>
+          蛋糕店
+      </template>
+    </category>
+
+
+    <category>
+      <pattern>你喜歡 *或 *</pattern>
+      <template>
+         我比較喜歡 <star index = "1"/> 勝過 <star index = "2"/>.
+      </template>
+    </category>
+    <category>
+      <pattern>I LOVE *</pattern>
+      <template>
+         I too LOVE <star/>.
+      </template>
+    </category>
+    <category>
+      <pattern>I LIKE *</pattern>
+      <template>
+         I too like <star/>.
+      </template>
+    </category>
+   
+    <category>
+      <pattern>DO YOU LIKE * OR *</pattern>
+      <template>
+         I like <star index = "1"/> better than <star index = "2"/>.
+      </template>
+    </category>
+
+    <category>
+      <pattern>I AM *</pattern>
+      <template>
+         Hello <set name = "username"> <star/>! </set>
+      </template>
+    </category>  
+   
+    <category>
+      <pattern>GOOD NIGHT</pattern>
+      <template>
+         Hi <get name = "username"/> !
+      </template>  
+    </category>
+
+    <category>
+      <pattern>我是 *</pattern>
+      <template>
+         你好 <set name = "username"> <star index = "1"/>! </set>
+      </template>
+    </category>
+
+    <category>
+      <pattern>再見</pattern>
+      <template>
+         再見 <get name = "username"/> !
+
+
+    <category>
+      <pattern>*</pattern>
+       <template>查無您所輸入的資料，您可以嘗試輸入:
+           [你好]
+           [再見]
+           [你喜歡 *或 *]
+       </template>
+    </category>
+
+
+    <category>
+      <pattern> * 的天氣</pattern>
+      <template>
+          {"exe":"python 08-WeatherData.py <star index = "1"/>"}
+      </template>
+    </category>
+    <category>
+      <pattern> * UBIKE資訊</pattern>
+      <template>{"exe":"python 07HTTP_JSON-openData-UbikeBysarea.py <star index = "1"/>"}</template>
+    </category>
+
+
+
+    
+</aiml>

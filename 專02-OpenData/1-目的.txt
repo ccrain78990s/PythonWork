@@ -1,0 +1,5 @@
+學習 讀取 Open Data  (格式:JSON、XML、CSV、EXCEL)
+
+並可以處理資料 印出想要的東西 繪圖片(matplotlib)
+
+也可以嘗試把東西放在tkinter裡面
